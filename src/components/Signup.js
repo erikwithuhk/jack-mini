@@ -3,16 +3,16 @@ import React, { Component, PropTypes } from 'react';
 const propTypes = {
 };
 
-class Time extends Component {
+class Signup extends Component {
   render() {
     return (
       <div>
-        <h1>Time</h1>
+        <h1>Sign up</h1>
       </div>
     );
   }
 }
 
-Time.propTypes = propTypes;
+Signup.propTypes = propTypes;
 
-export default Time;
+export default Signup;

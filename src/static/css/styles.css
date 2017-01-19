@@ -8,6 +8,15 @@ Resets
   padding: 0;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
+button {
+  -webkit-appearance: none;
+  font: inherit;
+}
+
 
 
 /* =======================
@@ -31,6 +40,7 @@ Global styles
 body {
   color: var(--slate);
   font-family: 'Futura LT Book', helvetica, arial, sans-serif;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,4 +49,79 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: var(--orange);
+}
+
+button {
+  background-color: var(--orange);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+.main-button {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-container {
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+/* =======================
+Header
+======================= */
+
+header {
+  background-color: var(--slate);
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+header h1 {
+  display: none;
+}
+
+
+
+/* =======================
+Nav
+======================= */
+
+nav {
+  background-color: #e7e8e9;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  position: absolute;
+  width: 100%;
+}
+
+
+
+/* =======================
+Media queries
+======================= */
+
+@media (min-width: 600px) {
+  nav {
+    position: relative;
+  }
 }
