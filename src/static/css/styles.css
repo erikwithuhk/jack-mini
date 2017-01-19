@@ -72,14 +72,13 @@ a {
 
 .btn--secondary {
   background-color: #fff;
-  border-color: var(--orange);
-  color: var(--orange);
+  border-color: var(--slate);
+  color: var(--slate);
 }
 
 .btn--secondary:hover {
-  background-color: var(--orange);
   border-color: var(--orange);
-  color: #fff;
+  color: var(--orange);
 }
 
 .main-button {
