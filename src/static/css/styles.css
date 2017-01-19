@@ -1,0 +1,42 @@
+/* =======================
+Resets
+======================= */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* =======================
+Colors
+======================= */
+
+:root {
+  --orange: #ff5000;
+  /*--chili: ;*/
+  --slate: #333d47;
+  /*--teal: ;*/
+  /*--mocha: ;*/
+}
+
+
+
+/* =======================
+Global styles
+======================= */
+
+body {
+  color: var(--slate);
+  font-family: 'Futura LT Book', helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Futura LT Bold';
+}
+
+a {
+  color: var(--orange);
+}

@@ -14,15 +14,17 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    loaders: [{
-      test: path.join(__dirname, 'src'),
-      loader: ['babel-loader'],
-      exclude: 'node_modules',
-      query: {
-        cacheDirectory: 'babel_cache',
-        presets: ['react', 'es2015'],
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: ['babel-loader'],
+        exclude: 'node_modules',
+        query: {
+          cacheDirectory: 'babel_cache',
+          presets: ['react', 'es2015'],
+        },
       },
-    }],
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
