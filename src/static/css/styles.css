@@ -25,10 +25,10 @@ Colors
 
 :root {
   --orange: #ff5000;
-  /*--chili: ;*/
+  --chili: #cb3524;
   --slate: #333d47;
-  /*--teal: ;*/
-  /*--mocha: ;*/
+  --teal: #6edad5;
+  --mocha: #96785d;
 }
 
 
@@ -51,16 +51,34 @@ a {
   color: var(--orange);
 }
 
-button {
-  background-color: var(--orange);
-  border: none;
-  color: #fff;
+.btn {
+  border-width: 2px;
+  border-style: solid;
   cursor: pointer;
+  margin: 1em;
   padding: 0.5em 1em;
 }
 
-button:hover {
+.btn--primary {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+.btn--primary:hover {
   filter: brightness(0.95);
+}
+
+.btn--secondary {
+  background-color: #fff;
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.btn--secondary:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
 }
 
 .main-button {
@@ -80,26 +98,6 @@ button:hover {
 
 
 /* =======================
-Header
-======================= */
-
-header {
-  background-color: var(--slate);
-}
-
-header img {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-}
-
-header h1 {
-  display: none;
-}
-
-
-
-/* =======================
 Nav
 ======================= */
 
@@ -112,6 +110,16 @@ nav {
   padding: 1em;
   position: absolute;
   width: 100%;
+}
+
+
+
+/* =======================
+Home
+======================= */
+
+.logo h1 {
+  display: none;
 }
 
 

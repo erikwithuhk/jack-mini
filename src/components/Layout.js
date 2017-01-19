@@ -1,19 +1,18 @@
 import React, { Component, PropTypes } from 'react';
-import Header from './Header';
 import Nav from './Nav';
 
 const propTypes = {
   children: PropTypes.element.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 class Layout extends Component {
   render() {
     const { pathname } = this.props.location;
-    // const nav = pathname === '/' ? null : <Nav />;
+    const pathnamesWithoutNav = ['/', '/signup'];
     return (
       <div className="app-container">
-        <Header />
-        {pathname !== '/' && <Nav />}
+        {!pathnamesWithoutNav.includes(pathname) && <Nav />}
         <main>{this.props.children}</main>
       </div>
     );
