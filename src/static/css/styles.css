@@ -12,7 +12,8 @@ html, body, #root {
   height: 100%;
 }
 
-button {
+button,
+input {
   -webkit-appearance: none;
   font: inherit;
 }
@@ -120,6 +121,17 @@ Home
 
 .logo h1 {
   display: none;
+}
+
+
+
+/* =======================
+User form
+======================= */
+
+.user-form__label,
+.user-form__input {
+  display: block;
 }
 
 

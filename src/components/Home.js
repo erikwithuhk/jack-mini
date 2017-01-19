@@ -7,7 +7,7 @@ const propTypes = {
 class Home extends Component {
   render() {
     return (
-      <section className="home-container">
+      <section className="home">
         <section className="logo">
           <img src="images/jack-mini-logo.png" alt="Jack Mini logo" />
           <h1>Jack Mini</h1>

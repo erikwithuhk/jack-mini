@@ -9,7 +9,7 @@ const propTypes = {
 class Layout extends Component {
   render() {
     const { pathname } = this.props.location;
-    const pathnamesWithoutNav = ['/', '/signup'];
+    const pathnamesWithoutNav = ['/', '/signup', '/login'];
     return (
       <div className="app-container">
         {!pathnamesWithoutNav.includes(pathname) && <Nav />}
