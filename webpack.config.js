@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'static'),
+    contentBase: path.join(__dirname, 'src', 'static'),
     inline: true,
     port: 8080,
   },
@@ -17,7 +17,7 @@ module.exports = {
     loaders: [{
       test: path.join(__dirname, 'src'),
       loader: ['babel-loader'],
-      exclude: /node_modules/,
+      exclude: 'node_modules',
       query: {
         cacheDirectory: 'babel_cache',
         presets: ['react', 'es2015'],
@@ -30,12 +30,12 @@ module.exports = {
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      mangle: true,
-      sourcemap: false,
-      beautify: false,
-      dead_code: true,
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: { warnings: false },
+    //   mangle: true,
+    //   sourcemap: false,
+    //   beautify: false,
+    //   dead_code: true,
+    // }),
   ],
 };
