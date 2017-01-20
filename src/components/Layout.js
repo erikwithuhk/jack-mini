@@ -1,10 +1,17 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Nav from './Nav';
 
 const propTypes = {
   children: PropTypes.element.isRequired,
   location: PropTypes.object.isRequired,
 };
+
+@connect((store) => {
+  return {
+    user: store.user,
+  };
+})
 
 class Layout extends Component {
   render() {

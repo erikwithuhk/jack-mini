@@ -21,7 +21,8 @@ module.exports = {
         exclude: 'node_modules',
         query: {
           cacheDirectory: 'babel_cache',
-          presets: ['react', 'es2015'],
+          presets: ['react', 'es2015', 'stage-0'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
         },
       },
     ],
