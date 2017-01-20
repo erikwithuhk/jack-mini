@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory, withRouter } from 'react-router';
 import { getPageTitle } from '../lib/pageTitles';
 
 const propTypes = {
@@ -71,7 +71,7 @@ class UserForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
+    browserHistory.push('/leaderboard');
   }
   render() {
     const { pathname } = this.props.location;
@@ -107,4 +107,4 @@ class UserForm extends Component {
 
 UserForm.propTypes = propTypes;
 
-export default UserForm;
+export default withRouter(UserForm);
