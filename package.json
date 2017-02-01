@@ -5,9 +5,9 @@
   "main": "app-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' src/server.js",
+    "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015,stage-0' --plugins 'react-html-attrs,transform-class-properties,transform-decorators-legacy' src/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
-    "dev": "node_modules/.bin/http-server src/static",
+    "dev": "node_modules/.bin/http-server src/public",
     "dev2": "webpack-dev-server --hot --progress --colors"
   },
   "repository": {
@@ -34,6 +34,7 @@
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "node-sass": "^4.4.0",
+    "node-sass-middleware": "^0.11.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
