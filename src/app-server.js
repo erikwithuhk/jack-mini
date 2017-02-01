@@ -23,12 +23,12 @@ app.use(logger('dev'));
 app.use('/api', apiRouter);
 
 app.use(sassMiddleware({
-  /* Options */
   src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'public', 'stylesheets'),
   debug: true,
   outputStyle: 'compressed',
   prefix: '/css',
+  force: true,
 }));
 
 app.use(Express.static(path.join(__dirname, 'public')));

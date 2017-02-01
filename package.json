@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015,stage-0' --plugins 'react-html-attrs,transform-class-properties,transform-decorators-legacy' src/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
-    "dev": "node_modules/.bin/http-server src/public",
-    "dev2": "webpack-dev-server --hot --progress --colors"
+    "dev": "nodemon --exec babel-node --presets 'react,es2015,stage-0' --plugins 'react-html-attrs,transform-class-properties,transform-decorators-legacy' src/server.js"
   },
   "repository": {
     "type": "git",
@@ -51,8 +50,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "nodemon": "^1.11.0",
     "redux-devtools": "^3.3.2",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^1.14.0"
   }
 }
