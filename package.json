@@ -5,10 +5,9 @@
   "main": "app-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' src/server.js",
+    "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015,stage-0' --plugins 'react-html-attrs,transform-class-properties,transform-decorators-legacy' src/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
-    "dev": "node_modules/.bin/http-server src/static",
-    "dev2": "webpack-dev-server --hot --progress --colors"
+    "dev": "nodemon --exec babel-node --presets 'react,es2015,stage-0' --plugins 'react-html-attrs,transform-class-properties,transform-decorators-legacy' src/server.js"
   },
   "repository": {
     "type": "git",
@@ -30,9 +29,12 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.22.0",
     "body-parser": "^1.16.0",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
+    "node-sass": "^4.4.0",
+    "node-sass-middleware": "^0.11.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
@@ -40,7 +42,10 @@
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
     "redux-promise-middleware": "^4.2.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.16.1"
   },
   "devDependencies": {
     "babel-loader": "^6.2.10",
@@ -49,8 +54,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "nodemon": "^1.11.0",
     "redux-devtools": "^3.3.2",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^1.14.0"
   }
 }
