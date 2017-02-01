@@ -1,8 +1,12 @@
 .user-form {
-  &__label {
+  &__label, &__input {
     display: block;
   }
   &__input {
-    display: block;
+    border: 2px solid lighten($slate, 50%);
+    &:focus {
+      border-color: $mocha;
+      outline: lighten($mocha, 50%) auto 5px;
+    }
   }
 }

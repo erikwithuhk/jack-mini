@@ -7,6 +7,9 @@
   transition: background-color 0.2s ease-in-out,
               border-color 0.2s ease-in-out,
               color 0.2s ease-in-out;
+  &:focus {
+    outline: lighten($orange, 25%) auto 5px;
+  }
   &--primary {
     @extend .btn;
     background-color: $orange;
