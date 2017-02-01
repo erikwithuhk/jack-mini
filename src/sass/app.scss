@@ -24,13 +24,11 @@ input {
 Colors
 ======================= */
 
-:root {
-  --orange: #ff5000;
-  --chili: #cb3524;
-  --slate: #333d47;
-  --teal: #6edad5;
-  --mocha: #96785d;
-}
+$orange: #ff5000;
+$chili: #cb3524;
+$slate: #333d47;
+$teal: #6edad5;
+$mocha: #96785d;
 
 
 
@@ -39,7 +37,7 @@ Global styles
 ======================= */
 
 body {
-  color: var(--slate);
+  color: $slate;
   font-family: 'Futura LT Book', helvetica, arial, sans-serif;
   line-height: 1.5;
 }
@@ -49,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--orange);
+  color: $orange;
 }
 
 .btn {
@@ -61,8 +59,8 @@ a {
 }
 
 .btn--primary {
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: $orange;
+  border-color: $orange;
   color: #fff;
 }
 
@@ -72,13 +70,13 @@ a {
 
 .btn--secondary {
   background-color: #fff;
-  border-color: var(--slate);
-  color: var(--slate);
+  border-color: $slate;
+  color: $slate;
 }
 
 .btn--secondary:hover {
-  border-color: var(--orange);
-  color: var(--orange);
+  border-color: $orange;
+  color: $orange;
 }
 
 .main-button {

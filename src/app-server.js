@@ -1,6 +1,9 @@
 import path from 'path';
-import Express, { Router } from 'express';
+import Express from 'express';
 import logger from 'morgan';
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
 import bodyParser from 'body-parser';
 import sassMiddleware from 'node-sass-middleware';
 import React from 'react';
@@ -9,11 +12,14 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 
 import apiRouter from './app/routes/apiRouter';
+import config from '../webpack.config';
 import routes from './config/routes';
 import NotFoundPage from './components/NotFound';
 import store from './store';
 
 const app = new Express();
+
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -30,6 +36,20 @@ app.use(sassMiddleware({
   prefix: '/css',
   force: true,
 }));
+
+if (process.env.NODE_ENV === 'dev') {
+  const compiler = webpack(config);
+  const middleware = webpackDevMiddleware(compiler, {
+    stats: {
+      colors: true,
+      chunks: false,
+    },
+  });
+  app.use(middleware);
+  app.use(webpackHotMiddleware(compiler, {
+    log: console.log,
+  }));
+}
 
 app.use(Express.static(path.join(__dirname, 'public')));
 
