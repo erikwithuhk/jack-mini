@@ -1,0 +1,31 @@
+.btn {
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  margin: 1em;
+  padding: 0.5em 1em;
+  transition: background-color 0.2s ease-in-out,
+              border-color 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+  &--primary {
+    @extend .btn;
+    background-color: $orange;
+    border-color: $orange;
+    color: #fff;
+  }
+  &--primary:hover {
+    background-color: darken($orange, 5%);
+    border-color: darken($orange, 5%);
+  }
+  &--secondary {
+    @extend .btn;
+    background-color: #fff;
+    border-color: $orange;
+    color: $orange;
+  }
+  &--secondary:hover {
+    background-color: darken($orange, 5%);
+    border-color: darken($orange, 5%);
+    color: #fff;
+  }
+}

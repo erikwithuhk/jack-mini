@@ -27,8 +27,8 @@ class Home extends Component {
           </section>
         </section>
         <section className="cta">
-          <Link to="/login"><button className="btn btn--primary">Log in</button></Link>
-          <Link to="/signup"><button className="btn btn--secondary">Sign up</button></Link>
+          <Link to="/login"><button className="btn--primary">Log in</button></Link>
+          <Link to="/signup"><button className="btn--secondary">Sign up</button></Link>
         </section>
       </section>
     );

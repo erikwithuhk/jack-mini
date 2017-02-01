@@ -106,7 +106,7 @@ class UserForm extends Component {
             value={this.state.password}
             onChange={e => this.handleChange(e)}
           />
-          <button className="btn btn--primary">{pageTitle}</button>
+          <button className="btn--primary">{pageTitle}</button>
         </form>
         {this.switchFormControl()}
       </section>
