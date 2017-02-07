@@ -16,8 +16,6 @@ const propTypes = {
 
 class Layout extends Component {
   render() {
-    const { pathname } = this.props.location;
-    const pathnamesWithoutNav = ['/', '/signup', '/login'];
     const header = this.props.user.currentUser ? null : <LogoHeader />;
     const nav = this.props.user.currentUser ? <Nav /> : null;
     return (
