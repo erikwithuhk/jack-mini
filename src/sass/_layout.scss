@@ -1,6 +1,15 @@
 .app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
+}
+
+main {
+  flex: 1;
+  display: flex;
 }

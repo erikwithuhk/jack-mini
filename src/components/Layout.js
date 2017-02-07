@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import LogoHeader from './headers/logoHeader';
 import Nav from './Nav';
 
 const propTypes = {
@@ -19,6 +20,7 @@ class Layout extends Component {
     const pathnamesWithoutNav = ['/', '/signup', '/login'];
     return (
       <div className="app-container">
+        <LogoHeader />
         {!pathnamesWithoutNav.includes(pathname) && <Nav />}
         <main>{this.props.children}</main>
       </div>
