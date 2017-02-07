@@ -16,8 +16,9 @@ const propTypes = {
 
 class Layout extends Component {
   render() {
-    const header = this.props.user.currentUser ? null : <LogoHeader />;
-    const nav = this.props.user.currentUser ? <Nav /> : null;
+    const currentUser = this.props.user.currentUser;
+    const header = currentUser !== null ? null : <LogoHeader />;
+    const nav = currentUser !== null ? <Nav id={currentUser.id} /> : null;
     return (
       <div className="app-container">
         {header}

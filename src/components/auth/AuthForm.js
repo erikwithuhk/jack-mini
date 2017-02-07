@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link, browserHistory, withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { getPageTitle } from '../lib/pageTitles';
-import { setUser } from '../actions/userActions';
+import { setUser } from '../../actions/userActions';
+import { getPageTitle } from '../../lib/pageTitles';
 
 const propTypes = {
   location: PropTypes.object.isRequired,
@@ -14,7 +14,7 @@ const propTypes = {
   };
 })
 
-class UserForm extends Component {
+class AuthForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -123,6 +123,6 @@ class UserForm extends Component {
   }
 }
 
-UserForm.propTypes = propTypes;
+AuthForm.propTypes = propTypes;
 
-export default withRouter(UserForm);
+export default withRouter(AuthForm);
