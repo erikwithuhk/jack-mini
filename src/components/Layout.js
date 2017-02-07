@@ -18,10 +18,12 @@ class Layout extends Component {
   render() {
     const { pathname } = this.props.location;
     const pathnamesWithoutNav = ['/', '/signup', '/login'];
+    const header = this.props.user.currentUser ? null : <LogoHeader />;
+    const nav = this.props.user.currentUser ? <Nav /> : null;
     return (
       <div className="app-container">
-        <LogoHeader />
-        {!pathnamesWithoutNav.includes(pathname) && <Nav />}
+        {header}
+        {nav}
         <main>{this.props.children}</main>
       </div>
     );
