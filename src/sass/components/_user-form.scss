@@ -1,12 +1,42 @@
 .user-form {
+  text-align: left;
+  padding: 0 10%;
+  width: 100%;
+  &__header {
+    margin: 1em auto;
+    &:after {
+      color: $orange;
+      content: "–";
+      display: block;
+    }
+  }
+  &__form {
+    .btn--primary {
+      margin-top: 2em;
+    }
+  }
   &__label, &__input {
     display: block;
+    margin: 0.5em auto;
+    width: 100%;
   }
   &__input {
-    border: 2px solid lighten($slate, 50%);
+    border: 2px solid lighten($slate, 60%);
+    margin-bottom: 1em;
+    padding: 0.25em 0.5em;
+    transition: border 0.3s ease-in-out;
     &:focus {
-      border-color: $mocha;
-      outline: lighten($mocha, 50%) auto 5px;
+      border-color: $orange;
+      outline: lighten($orange, 50%) auto 5px;
     }
+  }
+  &__switch-link {
+    display: block;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  button {
+    margin: 1em auto;
+    width: 70%;
   }
 }

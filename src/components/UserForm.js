@@ -61,14 +61,23 @@ class UserForm extends Component {
   }
   switchFormControl() {
     const { pathname } = this.props.location;
+    let switchedPathname;
+    let switchedText;
     switch (pathname) {
       case '/login':
-        return <Link to="/signup">Or sign up</Link>;
+        switchedPathname = '/signup';
+        switchedText = 'sign up';
+        break;
       case '/signup':
-        return <Link to="/login">Or log in</Link>;
+        switchedPathname = '/login';
+        switchedText = 'log in';
+        break;
       default:
         return null;
     }
+    return (
+      <Link to={switchedPathname} className="user-form__switch-link">Or {switchedText}</Link>
+    );
   }
   handleChange(e) {
     const stateKey = e.target.name;
