@@ -12,7 +12,7 @@ const routes = (
   <Route path="/" component={Layout} >
     <IndexRoute component={Home} />
     <Route path="leaderboard" component={Leaderboard} onEnter={authRedirect} />
-    <Route path="users" >
+    <Route path="users" onEnter={authRedirect} >
       <Route path=":id" component={UserDetail} />
     </Route>
     <Route path="signup" component={AuthForm} />

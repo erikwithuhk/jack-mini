@@ -11,3 +11,10 @@ export function setUser() {
     },
   };
 }
+
+export function signOutUser() {
+  return {
+    type: 'SIGN_OUT_USER',
+    payload: {},
+  };
+}
