@@ -1,9 +1,8 @@
 import { Router } from 'express';
+import v1Router from './v1/v1Router';
 
 const apiRouter = Router();
 
-apiRouter.get('/', (req, res) => {
-  res.status(200).json('This is the API');
-});
+apiRouter.use('/v1', v1Router);
 
 export default apiRouter;
