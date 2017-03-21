@@ -7,6 +7,9 @@ function sql(file) {
 }
 
 const sqlProvider = {
+  times: {
+    all: sql('./sql/time/all.sql'),
+  },
   users: {
     all: sql('./sql/user/all.sql'),
   },
